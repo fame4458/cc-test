@@ -44,11 +44,11 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.4",
+    "@fullhuman/postcss-purgecss": "^4.0.2",
+    "autoprefixer": "^9.0.0",
     "babel-plugin-import": "^1.13.3",
     "css-loader": "^5.0.2",
     "customize-cra": "^1.0.0",
-    "customize-cra-react-refresh": "^1.1.0",
     "postcss-cli": "^8.3.1",
     "react-app-rewired": "^2.1.8"
   }

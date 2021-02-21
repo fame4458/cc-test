@@ -1,18 +1,17 @@
-const { useBabelRc, override, addPostcssPlugins } = require('customize-cra')
-const { addReactRefresh } = require('customize-cra-react-refresh')
+const { useBabelRc, override, addPostcssPlugins } = require("customize-cra");
 
-const postcssPlugins = [require('autoprefixer')]
+const postcssPlugins = [require("autoprefixer")];
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
   postcssPlugins.push(
-    require('@fullhuman/postcss-purgecss')({
-      content: ['./src/**/*.jsx'],
-      css: ['./src/style/App.css'],
-      whitelist: ['body'],
+    require("@fullhuman/postcss-purgecss")({
+      content: ["./src/**/*.jsx"],
+      css: ["./src/style/App.css"],
+      whitelist: ["body"],
       defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
     })
-  )
+  );
 }
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
-module.exports = override(addPostcssPlugins(postcssPlugins), addReactRefresh(), useBabelRc())
+module.exports = override(addPostcssPlugins(postcssPlugins), useBabelRc());
