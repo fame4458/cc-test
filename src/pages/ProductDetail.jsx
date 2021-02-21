@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ProductDetail() {
     return (
-        <div>
+        <div className="container">
             ProductDetail
         </div>
     )

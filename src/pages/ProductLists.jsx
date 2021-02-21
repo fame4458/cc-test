@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ProductLists() {
     return (
-        <div>
+        <div className="container">
             ProductLists
         </div>
     )
