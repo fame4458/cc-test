@@ -1,14 +1,14 @@
 const plugins = [
-  ["@babel/plugin-proposal-decorators", { legacy: true }],
+  ['@babel/plugin-proposal-decorators', { legacy: true }],
   [
-    "babel-plugin-import",
+    'babel-plugin-import',
     {
-      libraryName: "lodash",
-      libraryDirectory: "",
-      camel2DashComponentName: false, // default: true
+      libraryName: 'lodash',
+      libraryDirectory: '',
+      camel2DashComponentName: false // default: true
     },
-    "lodash",
-  ],
-];
+    'lodash'
+  ]
+]
 
-module.exports = { plugins };
+module.exports = { plugins }
