@@ -8,6 +8,7 @@ import numeral from "numeral";
 export default function ProductDetail() {
   const [isFetch, setIsFetch] = useState(false);
   const [product, setProduct] = useState();
+  const [quantity, setQuatity] = useState(1);
 
   let { id } = useParams();
 
@@ -53,6 +54,29 @@ export default function ProductDetail() {
                     <h3 className="product-price">
                       ฿ {numeral(parseInt(product.price)).format("0,0.00")}
                     </h3>
+                    <div className="d-flex my-2">
+                      <div className="col-6">
+                        <p className="quan">Quantity:</p>
+                      </div>
+                      <div className="col-6 p-0">
+                        <div className="quan-box d-flex justify-content-between px-2 py-1">
+                          <div
+                            className="quan-func"
+                            onClick={() => setQuatity(quantity - 1)}
+                          >
+                            <p className="m-0">-</p>
+                          </div>
+
+                          <p className="quan-value">{quantity}</p>
+                          <div
+                            onClick={() => setQuatity(quantity + 1)}
+                            className="quan-func"
+                          >
+                            <p className="m-0">+</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <Button text="ADD TO CART" type />
                   </div>
                 </div>
