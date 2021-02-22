@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Core/Navbar";
 import { Helmet } from "react-helmet";
+import Footer from "./Core/Footer";
 
 export default function MainLayout(props) {
   const { component: Child } = props;
@@ -17,6 +18,7 @@ export default function MainLayout(props) {
           <Child {...props} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
