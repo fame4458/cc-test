@@ -10,11 +10,21 @@
 }
 
 .grey-text {
-  color: #BABABA !important;
+  color: #bababa !important;
   font-size: 12px !important;
 }
 
 .price {
   color: #ff6f61 !important;
   font-size: 14px !important;
+}
+
+.custom-card {
+  border-radius: 15px !important;
+}
+
+.no-style {
+  color: #000 !important;
+  text-decoration: none !important;
+  text-decoration-line: none !important;
 }

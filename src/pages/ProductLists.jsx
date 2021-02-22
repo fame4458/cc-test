@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { apiFetchProductList } from "../api/product";
 import _ from "lodash";
 import Card from "../components/Core/Card";
+import { Link } from "react-router-dom";
 
 export default function ProductLists() {
   const [isFetch, setIsFetch] = useState(false);
@@ -27,7 +28,9 @@ export default function ProductLists() {
       <div className="row p-5">
         {_.map(products, (data, index) => (
           <div className="col-3 my-2" key={index}>
-            <Card data={data} />
+            <Link to={`/product/${data._id}`} className="no-style">
+              <Card data={data} />
+            </Link>
           </div>
         ))}
       </div>

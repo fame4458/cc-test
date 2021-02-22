@@ -1,14 +1,19 @@
 import React from "react";
 import numeral from "numeral";
+import ReactStars from "react-rating-stars-component";
 
 export default function Card(props) {
   return (
-    <div className="card" style={{ minHeight: "100%" }}>
+    <div className="card custom-card" style={{ minHeight: "100%" }}>
       <img
         src={props.data.image_url}
         className="card-img-top"
         alt="product"
-        style={{ maxHeight: "200px" }}
+        style={{
+          maxHeight: "196px",
+          border: "0px solid transparent",
+          borderRadius: "15px",
+        }}
       />
       <div className="card-body d-flex">
         <img
@@ -27,9 +32,14 @@ export default function Card(props) {
               </p>
             </div>
             <div className="col-6">
-              <p className="grey-text">
-                Reviews ({props.data.review.number} reviews)
-              </p>
+              {props.data.review.rating > 0 && (
+                <>
+                  <p className="grey-text">
+                    Reviews ({props.data.review.number} reviews)
+                  </p>
+                  <ReactStars count={5} value={props.data.review.rating} />
+                </>
+              )}
             </div>
           </div>
         </div>
