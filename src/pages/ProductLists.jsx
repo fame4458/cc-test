@@ -24,7 +24,7 @@ export default function ProductLists() {
   }
 
   return (
-    <div className="container mx-auto mw-100 p-5">
+    <div className="container mx-auto mw-100 p-5 mb-5">
       <p className="product-header">
         Products ({products ? products.length : 0})
       </p>
