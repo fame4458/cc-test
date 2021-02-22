@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { apiFetchProductDetail } from "../api/product";
 import ReactStars from "react-rating-stars-component";
 import Button from "../components/Core/Button";
+import numeral from "numeral";
 
 export default function ProductDetail() {
   const [isFetch, setIsFetch] = useState(false);
@@ -30,7 +31,7 @@ export default function ProductDetail() {
       {product && (
         <div className="container p-5" style={{ minWidth: "100vw" }}>
           <div className="card p-4" style={{ borderRadius: "10px" }}>
-            <div className="row">
+            <div className="row justify-content-between">
               <div className="col-4">
                 <img
                   src={product.image_url}
@@ -38,7 +39,7 @@ export default function ProductDetail() {
                   style={{ maxWidth: "460px", borderRadius: "15px" }}
                 />
               </div>
-              <div className="col-8">
+              <div className="col-7">
                 <div className="card-body">
                   <h3 className="product-name">{product && product.name}</h3>
                   <div className="d-flex">
@@ -48,7 +49,11 @@ export default function ProductDetail() {
                   </div>
                   <p className="description">{product.description}</p>
                   <div className="col-4 p-0">
-                    <Button text="ADD TO CART" />
+                    <p className="description">Price</p>
+                    <h3 className="product-price">
+                      ฿ {numeral(parseInt(product.price)).format("0,0.00")}
+                    </h3>
+                    <Button text="ADD TO CART" type />
                   </div>
                 </div>
               </div>

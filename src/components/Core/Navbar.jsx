@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/logo.svg";
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light custom-nav">
       <div className="container-fluid">
         <a class="navbar-brand" href="/">
-          Navbar
+          <img src={Logo} alt="logo" />
         </a>
         <button
           class="navbar-toggler"
@@ -23,17 +24,32 @@ export default function Navbar() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link to="/" className="nav-link">
-                Product Lists
+                Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/product/1" className="nav-link">
-                Test
+              <Link to="/" className="nav-link">
+                New Products
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/cart" className="nav-link">
-                Cart
+              <Link to="/" className="nav-link">
+                Women
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Men
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Kid
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Accessories
               </Link>
             </li>
           </ul>

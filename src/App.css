@@ -34,6 +34,11 @@
   font-size: 28px !important;
 }
 
+.product-price {
+  color: #ff6f61 !important;
+  font-size: 28px !important;
+}
+
 .rating {
   font-size: 14px !important;
   color: #a4a4a4 !important;
@@ -45,7 +50,7 @@
 }
 
 .custom-button {
-  background-color: #FF6F61 !important;
+  background-color: #ff6f61 !important;
   color: #fff !important;
   border-radius: 10px !important;
 }
