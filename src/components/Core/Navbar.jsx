@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.svg";
+import Cart from "../../assets/icons/cart.svg";
 
 export default function Navbar() {
   return (
@@ -52,6 +53,13 @@ export default function Navbar() {
                 Accessories
               </Link>
             </li>
+          </ul>
+        </div>
+        <div className="d-flex">
+          <img src={Cart} alt="cart" />
+          &nbsp;
+          <ul className="navbar-nav">
+            <li className="nav-item">Cart</li>
           </ul>
         </div>
       </div>
