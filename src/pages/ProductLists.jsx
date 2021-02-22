@@ -23,10 +23,12 @@ export default function ProductLists() {
   }
 
   return (
-    <div className="container">
-      <div className="p-5">
+    <div className="container mx-auto mw-100">
+      <div className="row p-5">
         {_.map(products, (data, index) => (
-          <Card key={index} data={data} />
+          <div className="col-3 my-2" key={index}>
+            <Card data={data} />
+          </div>
         ))}
       </div>
     </div>

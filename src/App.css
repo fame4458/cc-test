@@ -8,3 +8,13 @@
   color: #fff !important;
   text-decoration-line: none !important;
 }
+
+.grey-text {
+  color: #BABABA !important;
+  font-size: 12px !important;
+}
+
+.price {
+  color: #ff6f61 !important;
+  font-size: 14px !important;
+}
